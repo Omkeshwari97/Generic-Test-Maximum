@@ -49,4 +49,15 @@ public class GenericTestMaximumJunitTest
 		assertEquals(expect, actual);
 	}
 
+	//UC3
+		@Test
+		public void givenString_returnNumber_whenMaximum() 
+		{
+			GenericTestMaximum objGenericTestMaximum = new GenericTestMaximum();
+			
+			assertSame("Peach", objGenericTestMaximum.findMaximum("Apple", "Banana", "Peach"));
+			assertSame("Peach", objGenericTestMaximum.findMaximum("Apple", "Peach", "Banana"));
+			assertSame("Peach", objGenericTestMaximum.findMaximum("Banana", "Apple", "Peach"));
+		}
+		
 }
