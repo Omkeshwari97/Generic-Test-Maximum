@@ -51,7 +51,7 @@ public class GenericTestMaximumJunitTest
 
 	//UC3
 		@Test
-		public void givenString_returnNumber_whenMaximum() 
+		public void givenString_returnString_whenMaximum() 
 		{
 			GenericTestMaximum objGenericTestMaximum = new GenericTestMaximum();
 			
