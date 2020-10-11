@@ -7,6 +7,7 @@ import org.junit.Test;
 public class GenericTestMaximumJunitTest 
 {
 
+	//UC1
 	@Test
 	public void givenInteger_returnNumber_whenMaximum() 
 	{

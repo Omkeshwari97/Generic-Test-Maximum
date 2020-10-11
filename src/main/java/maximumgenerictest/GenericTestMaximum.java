@@ -1,7 +1,8 @@
 package maximumgenerictest;
 
 public class GenericTestMaximum 
-{	
+{
+	//UC1
 	public Integer findMaximum(Integer a, Integer b, Integer c) 
 	{
 		Integer max = a;
