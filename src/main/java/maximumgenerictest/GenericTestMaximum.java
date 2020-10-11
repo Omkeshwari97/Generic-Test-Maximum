@@ -1,20 +1,31 @@
 package maximumgenerictest;
 
-public class GenericTestMaximum 
+public class GenericTestMaximum <E extends Comparable<E>> 
 {
-	//UC4
-	public <E extends Comparable<E>> E findMaximum(E a, E b, E c)
+	E x;
+	E y;
+	E z;
+	
+	public GenericTestMaximum(E x, E y, E z)
 	{
-		E max = a;
+		this.x = x;
+		this.y = y;
+		this.z = z;
+	}
+	
+	//UC4
+	public E findMaximum()
+	{
+		E max = x;
 		
-		if(b.compareTo(max) > 0)
+		if(y.compareTo(max) > 0)
 		{
-			max = b;
+			max = y;
 		}
 		
-		if(c.compareTo(max) > 0)
+		if(z.compareTo(max) > 0)
 		{
-			max = c;
+			max = z;
 		}
 			
 		return max;
