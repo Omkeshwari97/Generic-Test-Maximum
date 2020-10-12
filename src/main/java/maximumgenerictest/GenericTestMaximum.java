@@ -17,6 +17,7 @@ public class GenericTestMaximum <E extends Comparable<E>>
 	public E testMaximum()
 	{
 		E test = findMaximum(args);
+		printMax(test);
 		return test;
 	}
 	
@@ -29,5 +30,8 @@ public class GenericTestMaximum <E extends Comparable<E>>
 		return max;
 	}
 	
-	
+	public void printMax(E test)
+	{
+		System.out.println("Max value : " + test);
+	}
 }
