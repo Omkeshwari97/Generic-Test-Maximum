@@ -1,88 +1,33 @@
 package maximumgenerictest;
 
+import java.util.Arrays;
+
 public class GenericTestMaximum <E extends Comparable<E>> 
 {
 	E x;
 	E y;
 	E z;
+	E args[];
 	
-	public GenericTestMaximum(E x, E y, E z)
+	public GenericTestMaximum(E ...args)
 	{
-		this.x = x;
-		this.y = y;
-		this.z = z;
+		this.args = args;
 	}
 	
-	//UC4
-	public E findMaximum()
+	public E testMaximum()
 	{
-		E max = x;
+		E test = findMaximum(args);
+		return test;
+	}
+	
+	public E findMaximum(E ...args)
+	{
+		E max;
+		Arrays.sort(args);
+		max=args[args.length-1];
 		
-		if(y.compareTo(max) > 0)
-		{
-			max = y;
-		}
-		
-		if(z.compareTo(max) > 0)
-		{
-			max = z;
-		}
-			
 		return max;
 	}
 	
 	
-	/*//UC1
-	public Integer findMaximum(Integer a, Integer b, Integer c) 
-	{
-		Integer max = a;
-		
-		if(b.compareTo(max) > 0)
-		{
-			max = b;
-		}
-		
-		if(c.compareTo(max) > 0)
-		{
-			max = c;
-		}
-			
-		return max;
-	}
-	
-	//UC2
-	public Float findMaximum(Float a, Float b, Float c)
-	{
-		Float max = a;
-		
-		if(b.compareTo(max) > 0)
-		{
-			max = b;
-		}
-		
-		if(c.compareTo(max) > 0)
-		{
-			max = c;
-		}
-		
-		return max;
-	}
-	
-	//UC3
-	public String findMaximum(String a, String b, String c)
-	{
-		String max = a;
-		
-		if(b.compareTo(max) > 0)
-		{
-			max = b;
-		}
-		
-		if(c.compareTo(max) > 0)
-		{
-			max = c;
-		}
-		
-		return max;
-	}*/
 }
